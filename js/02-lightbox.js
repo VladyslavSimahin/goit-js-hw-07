@@ -24,12 +24,7 @@ const galleryMarkup = galleryItems
 
 gallery.insertAdjacentHTML("afterbegin", galleryMarkup);
 
-gallery.addEventListener("click", (event) => {
-  event.preventDefault();
-  let lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-
-  console.log("lightbox");
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
 });

@@ -27,8 +27,11 @@ gallery.addEventListener("click", (event) => {
   if (event.target.classList.contains("gallery__image")) {
     const largeImageUrl = event.target.dataset.source;
 
-    const modal = basicLightbox.create(`
-    <img src="${largeImageUrl}" alt="" width='800' height= '600' />`);
-    modal.show();
+    basicLightbox
+      .create(
+        `
+    <img src="${largeImageUrl}" alt="" width='800' height= '600' />`
+      )
+      .show();
   }
 });
